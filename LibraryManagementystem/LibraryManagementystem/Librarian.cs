@@ -14,7 +14,7 @@ namespace LibraryManagementystem
 
         public int Issue(Books books)
         {
-            IssuedBooks.Add(books.Name);
+            IssuedBooks.Add(books);
             library.Remove(books);
             return 25;
         }
