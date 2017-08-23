@@ -51,6 +51,7 @@ namespace LibraryManagementSystem_Fixtures
             Librarian librarian = new Librarian();
             librarian.Issue(book1);
             Assert.AreEqual(2,library.CollectionOfBooks.Count);
+            Assert.AreEqual(1, librarian.IssuedBooks.Count);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace LibraryManagementystem
 {
     public class Librarian
     {
-        List<Books> IssuedBooks = new List<Books>();
+        public List<Books> IssuedBooks = new List<Books>();
         Library library = new Library();
 
 
@@ -24,9 +24,13 @@ namespace LibraryManagementystem
         {
             return library.CollectionOfBooks;
         }
-        //public override string ToString()
-        //{
-        //    return $"{}"
-        //}
+        public override string ToString()
+        {
+            foreach (var s in IssuedBooks)
+            {
+                return $"Name:{s.Name} CategoryofBooks: {s.Category}";
+            }
+            return null;
+        }
     }
 }
